@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FitLife Gym & Fitness Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #d9534f;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input, select {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #d9534f;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 5px;
+        }
+        button:hover {
+            background-color: #c9302c;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #222;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>FitLife Gym & Fitness Center</h1>
+        <p>Your journey to a healthier lifestyle starts here</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#programs">Fitness Programs</a>
+        <a href="#workouts">Workout Plans</a>
+        <a href="#membership">Membership</a>
+        <a href="#health">Health Info</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- 1. Fitness Programs Section -->
+        <div id="programs" class="section">
+            <h2>Fitness Programs</h2>
+            <p>We offer a wide variety of specialized programs to help you reach your goals:</p>
+            <ul>
+                <li><strong>Strength & Conditioning:</strong> Build raw strength using free weights and machines.</li>
+                <li><strong>Cardio & Fat Burn:</strong> High-intensity workouts to improve heart health and lose weight.</li>
+                <li><strong>Yoga & Flexibility:</strong> Improve posture, reduce stress, and enhance muscle recovery.</li>
+            </ul>
+        </div>
+
+        <!-- 2. Workout Plans Section -->
+        <div id="workouts" class="section">
+            <h2>Weekly Workout Plans</h2>
+            <p>Follow our structured schedules for optimal physical results:</p>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Focus Area</th>
+                    <th>Exercises</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Chest & Triceps</td>
+                    <td>Bench Press, Push-ups, Tricep Dips</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Back & Biceps</td>
+                    <td>Pull-ups, Lat Pulldown, Bicep Curls</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Legs & Core</td>
+                    <td>Squats, Lunges, Planks</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 3. Membership Plans Section -->
+        <div id="membership" class="section">
+            <h2>Membership Plans</h2>
+            <p>Choose a plan that fits your budget and schedule:</p>
+            <ul>
+                <li><strong>Basic Plan:</strong> Access to gym equipment ($30/month)</li>
+                <li><strong>Pro Plan:</strong> Access to equipment + fitness classes ($50/month)</li>
+                <li><strong>VIP Plan:</strong> All access + personal trainer ($90/month)</li>
+            </ul>
+            <h3>Register for a Plan</h3>
+            <input type="text" id="memberName" placeholder="Enter your full name">
+            <select id="selectedPlan">
+                <option value="Basic Plan">Basic Plan ($30/month)</option>
+                <option value="Pro Plan">Pro Plan ($50/month)</option>
+                <option value="VIP Plan">VIP Plan ($90/month)</option>
+            </select>
+            <button onclick="registerMember()">Join Now</button>
+        </div>
+
+        <!-- 4. Health-Related Information Section -->
+        <div id="health" class="section">
+            <h2>Health & Nutrition Information</h2>
+            <p>Staying fit requires more than just lifting weights. Keep these essential tips in mind:</p>
+            <ul>
+                <li><strong>Hydration:</strong> Drink at least 3 to 4 liters of water daily to stay hydrated during workouts.</li>
+                <li><strong>Nutrition:</strong> Eat a balanced diet rich in proteins, complex carbohydrates, and healthy fats.</li>
+                <li><strong>Rest & Recovery:</strong> Allow 7 to 8 hours of sleep for proper muscle repair and growth.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 FitLife Gym & Fitness. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Section -->
+    <script>
+        function registerMember() {
+            var name = document.getElementById("memberName").value;
+            var plan = document.getElementById("selectedPlan").value;
+
+            if (name === "") {
+                alert("Please enter your name before registering!");
+            } else {
+                alert("Thank you " + name + "! You have successfully registered for the " + plan + ".");
+            }
+        }
+    </script>
+
+</body>
+</html>
